@@ -1,13 +1,11 @@
 {
-  "name": "Collector Bot",
+  "name": "APHG Bot",
   "version": "1.0.0",
-  "description": "Plz come back later for accurate description",
+  "description": "To help manage the APWH server",
   "main": "bot.js",
-  "author": "Graham",
+  "author": "Graham/Charles",
   "dependencies": {
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
-    "mongodb-stitch-browser-sdk": "^4.0.14",
-    "pg": "^7.5.0",
     "winston": "^3.1.0"
   }
 }
