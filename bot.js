@@ -71,6 +71,39 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			});
 		}
             break;
+		case 'top':
+			bot.deleteMessage({
+					channelID: channelID,
+					messageID: evt.d.id
+				});
+			if (serverID == '500864200378155008'){
+			    bot.addToRole({
+				    serverID: serverID,
+				    userID: userID,
+				    roleID: '500864200378155008'
+			    });
+			}
+			if (serverID == '495699832313217064'){
+			    bot.addToRole({
+				    serverID: serverID,
+				    userID: userID,
+				    roleID: '495720344779358210'
+			    })
+			}
+			if (serverID == '489547644138422302'){
+				bot.addToRole({
+					serverID: serverID,
+					userID: userID,
+					roleID: '489550068022509568'
+				});
+			}
+			if (serverID == '429446593792442369'){
+				bot.addToRole({
+					serverID: serverID,
+					userID: userID,
+					roleID: '491801015436181504'
+				});
+			}
             case 'fourth':
 		canChange = true;
 		if (bot.servers[serverID].members[userID].roles != undefined){
