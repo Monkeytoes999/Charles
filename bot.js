@@ -38,15 +38,15 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         switch(cmd) {
             case 'first':
 		canChange = true;
-		if (bot.servers[serverID].members[userID].roles != undefined){
-				if (bot.servers[serverID].members[userID].roles.includes(504814827626037248)){
+		if (bot.servers[serverID].member[userID].roles != undefined){
+				if (bot.servers[serverID].member[userID].roles.includes(504814827626037248)){
 					canChange = false;
 					bot.sendMessage({
 						to: channelID,
 						message: user + ', you are already in this block.'
 					});
 				}
-				if (bot.servers[serverID].members[userID].roles.includes(504814729169207316)){
+				if (bot.servers[serverID].member[userID].roles.includes(504814729169207316)){
 					canChange = false;
 					bot.sendMessage({
 						to: channelID,
@@ -71,15 +71,15 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             break;
             case 'fourth':
 		canChange = true;
-		if (bot.servers[serverID].members[userID].roles != undefined){
-				if (bot.servers[serverID].members[userID].roles.includes(504814729169207316)){
+		if (bot.servers[serverID].member[userID].roles != undefined){
+				if (bot.servers[serverID].member[userID].roles.includes(504814729169207316)){
 					canChange = false;
 					bot.sendMessage({
 						to: channelID,
 						message: user + ', you are already in this block.'
 					});
 				}
-				if (bot.servers[serverID].members[userID].roles.includes(504814827626037248)){
+				if (bot.servers[serverID].member[userID].roles.includes(504814827626037248)){
 					canChange = false;
 					bot.sendMessage({
 						to: channelID,
