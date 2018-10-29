@@ -65,7 +65,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				canChange = false;
 				bot.sendMessage({
 					to: channelID,
-					message: user + ', you are currently in fourth block. To change this, contact Charles.
+					message: user + ', you are currently in fourth block. To change this, contact Charles.'
 				});
 			}
 		}
@@ -91,7 +91,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				canChange = false;
 				bot.sendMessage({
 					to: channelID,
-					message: user + ', you are currently in first block. To change this, contact Charles.
+					message: user + ', you are currently in first block. To change this, contact Charles.'
 				});
 			}
 		}
