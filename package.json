@@ -1,5 +1,5 @@
 {
-  "name": "APHG Bot",
+  "name": "APHGBot",
   "version": "1.0.0",
   "description": "To help manage the APWH server",
   "main": "bot.js",
