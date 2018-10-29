@@ -29,7 +29,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		serverID = bot.channels[channelID].guild_id;
 	}
 	
-    if (message.substring(0, 1) == '#') {
+    if (message.substring(0, 1) == '&') {
         var args = message.substring(1).split(' ');
         var cmd = args[0];
 		
@@ -91,7 +91,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		case 'help':
 			bot.sendMessage({
 				to: channelID,
-				message: 'To add yourself to a block, say #first or #fourth, depending on your class period. \n You can only do this if you aren\'t in either role. If you accidently put yourself in the wrong block, contact Charles and he will change it.'
+				message: 'To add yourself to a block, say #first or #fourth, depending on your class period. \nYou can only do this if you aren\'t in either role. If you accidently put yourself in the wrong block, contact Charles and he will change it.'
 			});
 			break;
          }
