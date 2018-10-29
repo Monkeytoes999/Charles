@@ -106,7 +106,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		case 'help':
 			bot.sendMessage({
 				to: channelID,
-				message: "To add yourself to a block, say #first or #fourth, depending on your class period. \n You can only do this if you aren't in either role. If you accidently put yourself in the wrong block, contact Charles and he will change it.'
+				message: 'To add yourself to a block, say #first or #fourth, depending on your class period. \n You can only do this if you aren\'t in either role. If you accidently put yourself in the wrong block, contact Charles and he will change it.'
          }
      }
 });
