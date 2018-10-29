@@ -38,7 +38,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         switch(cmd) {
             case 'first':
 		canChange = true;
-		if (bot.bot.servers[serverID].members.roles.length > 0){
+		if (bot.servers[serverID].members.roles.length > 0){
 			for (var a = 0; a < bot.servers[serverID].members.roles.length; a++){
 				if (bot.servers[serverID].members.roles[a] == 504814827626037248){
 					canChange = false;
@@ -73,7 +73,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             break;
             case 'fourth':
 		canChange = true;
-		if (bot.bot.servers[serverID].members.roles.length > 0){
+		if (bot.servers[serverID].members.roles.length > 0){
 			for (var a = 0; a < bot.servers[serverID].members.roles.length; a++){
 				if (bot.servers[serverID].members.roles[a] == 504814729169207316){
 					canChange = false;
