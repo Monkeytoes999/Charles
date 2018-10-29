@@ -54,6 +54,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				});
 			}
 		}
+			if (serverID != 504814259083935744){
+				bot.sendMessage({
+					to: channelID,
+					message: 'Sorry, this bot was made for a specific server. It won\'t work here.'
+				});
+				canChange = false;
+			}
 		if (canChange){
                		bot.addToRole({
 				serverID: serverID,
@@ -80,6 +87,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				});
 			}
 		}
+			if (serverID != 504814259083935744){
+				bot.sendMessage({
+					to: channelID,
+					message: 'Sorry, this bot was made for a specific server. It won\'t work here.'
+				});
+				canChange = false;
+			}
 		if (canChange){
                		bot.addToRole({
 				serverID: serverID,
