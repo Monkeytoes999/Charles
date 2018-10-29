@@ -39,22 +39,20 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             case 'first':
 		canChange = true;
 		if (bot.servers[serverID].members.roles != undefined){
-			for (var a = 0; a < bot.servers[serverID].members.roles.length; a++){
-				if (bot.servers[serverID].members.roles[a] == '504814827626037248'){
+				if (bot.servers[serverID].members[userID].roles.includes(504814827626037248)){
 					canChange = false;
 					bot.sendMessage({
 						to: channelID,
 						message: user + ', you are already in this block.'
 					});
 				}
-				if (bot.servers[serverID].members.roles[a] == '504814729169207316'){
+				if (bot.servers[serverID].members[userID].roles.includes(504814729169207316)){
 					canChange = false;
 					bot.sendMessage({
 						to: channelID,
 						message: user + ', you are currently in fourth block. To change this, contact Charles.'
 					});
 				}
-			}
 		}
 			if (serverID != '504814259083935744'){
 				bot.sendMessage({
@@ -73,23 +71,21 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             break;
             case 'fourth':
 		canChange = true;
-		if (bot.servers[serverID].members.roles != undefined){
-			for (var a = 0; a < bot.servers[serverID].members.roles.length; a++){
-				if (bot.servers[serverID].members.roles[a] == '504814729169207316'){
+		if (bot.servers[serverID].members[userID].roles != undefined){
+				if (bot.servers[serverID].members[userID].roles.includes(504814729169207316)){
 					canChange = false;
 					bot.sendMessage({
 						to: channelID,
 						message: user + ', you are already in this block.'
 					});
 				}
-				if (bot.servers[serverID].members.roles[a] == '504814827626037248'){
+				if (bot.servers[serverID].members[userID].roles.includes(504814827626037248)){
 					canChange = false;
 					bot.sendMessage({
 						to: channelID,
 						message: user + ', you are currently in first block. To change this, contact Charles.'
 					});
 				}
-			}
 		}
 			if (serverID != '504814259083935744'){
 				bot.sendMessage({
