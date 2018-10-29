@@ -40,14 +40,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		canChange = true;
 		if (bot.servers[serverID].members.roles != undefined){
 			for (var a = 0; a < bot.servers[serverID].members.roles.length; a++){
-				if (bot.servers[serverID].members.roles[a] == 504814827626037248){
+				if (bot.servers[serverID].members.roles[a] == '504814827626037248'){
 					canChange = false;
 					bot.sendMessage({
 						to: channelID,
 						message: user + ', you are already in this block.'
 					});
 				}
-				if (bot.servers[serverID].members.roles[a] == 504814729169207316){
+				if (bot.servers[serverID].members.roles[a] == '504814729169207316'){
 					canChange = false;
 					bot.sendMessage({
 						to: channelID,
@@ -56,7 +56,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				}
 			}
 		}
-			if (serverID != 504814259083935744){
+			if (serverID != '504814259083935744'){
 				bot.sendMessage({
 					to: channelID,
 					message: 'Sorry, this bot was made for a specific server. It won\'t work here.'
@@ -67,7 +67,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                		bot.addToRole({
 				serverID: serverID,
 				userID: userID,
-				roleID: 504814827626037248
+				roleID: '504814827626037248'
 			});
 		}
             break;
@@ -75,14 +75,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		canChange = true;
 		if (bot.servers[serverID].members.roles != undefined){
 			for (var a = 0; a < bot.servers[serverID].members.roles.length; a++){
-				if (bot.servers[serverID].members.roles[a] == 504814729169207316){
+				if (bot.servers[serverID].members.roles[a] == '504814729169207316'){
 					canChange = false;
 					bot.sendMessage({
 						to: channelID,
 						message: user + ', you are already in this block.'
 					});
 				}
-				if (bot.servers[serverID].members.roles[a] == 504814827626037248){
+				if (bot.servers[serverID].members.roles[a] == '504814827626037248'){
 					canChange = false;
 					bot.sendMessage({
 						to: channelID,
@@ -91,7 +91,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				}
 			}
 		}
-			if (serverID != 504814259083935744){
+			if (serverID != '504814259083935744'){
 				bot.sendMessage({
 					to: channelID,
 					message: 'Sorry, this bot was made for a specific server. It won\'t work here.'
@@ -102,7 +102,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                		bot.addToRole({
 				serverID: serverID,
 				userID: userID,
-				roleID: 504814729169207316
+				roleID: '504814729169207316'
 			});
 		}
 		break;
