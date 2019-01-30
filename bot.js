@@ -70,6 +70,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				roleID: '539986030347157515'
 			});
 		}
+            break;
             case 'second':
 		canChange = true;
 		if (bot.servers[serverID].members[userID].roles != undefined){
