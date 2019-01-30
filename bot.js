@@ -1,6 +1,6 @@
 var Discord = require('discord.io');
 var logger = require('winston');
-var serverID = '';
+var serverID = '504814259083935744';
 var canChange = true;
 
 // Configure logger settings
