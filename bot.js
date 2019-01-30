@@ -40,6 +40,40 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		canChange = true;
 		if (bot.servers[serverID].members[userID].roles != undefined){
 			for (var b = 0; b < bot.servers[serverID].members[userID].roles.length; b++){
+				if (bot.servers[serverID].members[userID].roles[b] == 539986030347157515){
+					canChange = false;
+					bot.sendMessage({
+						to: channelID,
+						message: user + ', you are already in this block.'
+					});
+				}
+				if (bot.servers[serverID].members[userID].roles[b] == 504814729169207316 || 504814827626037248 || 539986032385327116){
+					canChange = false;
+					bot.sendMessage({
+						to: channelID,
+						message: user + ', you are currently in another block. To change this, contact Charles.'
+					});
+				}
+			}
+		}
+			if (serverID != '504814259083935744'){
+				bot.sendMessage({
+					to: channelID,
+					message: 'Sorry, this bot was made for a specific server. It won\'t work here.'
+				});
+				canChange = false;
+			}
+		if (canChange){
+               		bot.addToRole({
+				serverID: serverID,
+				userID: userID,
+				roleID: '539986030347157515'
+			});
+		}
+            case 'second':
+		canChange = true;
+		if (bot.servers[serverID].members[userID].roles != undefined){
+			for (var b = 0; b < bot.servers[serverID].members[userID].roles.length; b++){
 				if (bot.servers[serverID].members[userID].roles[b] == 504814827626037248){
 					canChange = false;
 					bot.sendMessage({
@@ -47,11 +81,11 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						message: user + ', you are already in this block.'
 					});
 				}
-				if (bot.servers[serverID].members[userID].roles[b] == 504814729169207316){
+				if (bot.servers[serverID].members[userID].roles[b] == 539986030347157515 || 504814729169207316 || 539986032385327116){
 					canChange = false;
 					bot.sendMessage({
 						to: channelID,
-						message: user + ', you are currently in fourth block. To change this, contact Charles.'
+						message: user + ', you are currently in another block. To change this, contact Charles.'
 					});
 				}
 			}
@@ -71,22 +105,22 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			});
 		}
             break;
-            case 'fourth':
+            case 'third':
 		canChange = true;
 		if (bot.servers[serverID].members[userID].roles != undefined){
-			for (var a = 0; a < bot.servers[serverID].members[userID].roles.length; a++){
-				if (bot.servers[serverID].members[userID].roles[a] == 504814729169207316){
+			for (var b = 0; b < bot.servers[serverID].members[userID].roles.length; b++){
+				if (bot.servers[serverID].members[userID].roles[b] == 504814729169207316){
 					canChange = false;
 					bot.sendMessage({
 						to: channelID,
 						message: user + ', you are already in this block.'
 					});
 				}
-				if (bot.servers[serverID].members[userID].roles[a] == 504814827626037248){
+				if (bot.servers[serverID].members[userID].roles[b] == 539986030347157515 ||504814827626037248 || 539986032385327116){
 					canChange = false;
 					bot.sendMessage({
 						to: channelID,
-						message: user + ', you are currently in first block. To change this, contact Charles.'
+						message: user + ', you are currently in another block. To change this, contact Charles.'
 					});
 				}
 			}
@@ -103,6 +137,41 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				serverID: serverID,
 				userID: userID,
 				roleID: '504814729169207316'
+			});
+		}
+            break;
+            case 'fourth':
+		canChange = true;
+		if (bot.servers[serverID].members[userID].roles != undefined){
+			for (var a = 0; a < bot.servers[serverID].members[userID].roles.length; a++){
+				if (bot.servers[serverID].members[userID].roles[a] == 539986032385327116){
+					canChange = false;
+					bot.sendMessage({
+						to: channelID,
+						message: user + ', you are already in this block.'
+					});
+				}
+				if (bot.servers[serverID].members[userID].roles[a] == 504814827626037248 || 539986030347157515 || 504814729169207316){
+					canChange = false;
+					bot.sendMessage({
+						to: channelID,
+						message: user + ', you are currently in another block. To change this, contact Charles.'
+					});
+				}
+			}
+		}
+			if (serverID != '504814259083935744'){
+				bot.sendMessage({
+					to: channelID,
+					message: 'Sorry, this bot was made for a specific server. It won\'t work here.'
+				});
+				canChange = false;
+			}
+		if (canChange){
+               		bot.addToRole({
+				serverID: serverID,
+				userID: userID,
+				roleID: '539986032385327116'
 			});
 		}
 		break;
